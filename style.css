@@ -1,0 +1,193 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+ .left {
+      background-color: lightgrey;
+    }
+@media (min-width: 992px) {
+      .left {
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+      }
+    }
+ .name{
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+  .title{
+  font-family: monospace;
+  font-size: 1.2rem; /* Bootstrap fs-6 ke barabar */
+  border-right: 3px solid orange; /* blinking cursor */
+  white-space: nowrap; /* ek hi line me dikhaye */
+  overflow: hidden;
+  width: 0; /* initial width = 0 */
+  animation: typing 3s steps(28) forwards, blink 1.2s step-end infinite;
+  }
+  
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 30ch; border-color:orange } /* text characters ke hisaab se */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@media(max-width:991px){
+  .github{
+    color:beige;
+  }
+}
+@media(min-width:992px){
+  .github{
+    color:black;
+  }
+}
+.linkedin{
+  color: #0A66C2;
+}
+@media(max-width:991px){
+  .links_parent a{
+    color:black !important;
+    display: flex;
+    justify-content:space-between;
+  }
+}
+.link1 a:hover{
+  background-color: white;
+  color:black !important;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding:7px;
+}
+.link2 a:hover{
+  background-color: white;
+  color:black!important;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding:7px;
+}
+.link3 a:hover{
+  background-color:white;
+  color:black !important;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding:7px;
+}
+.link4 a:hover{
+  background-color:white;
+  color:black !important;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding:7px;
+}
+@media(max-width:991px){
+  .links_parent{
+    display: none !important;
+  }
+}
+@media(min-width:992px){
+  nav{
+    display: none !important;
+  }
+}
+footer{
+  height: 100px;
+}
+@media(max-width:991px){
+  #Photo{
+    width:40vw !important;
+    height:54vh !important;
+    position:relative;
+    left: 0vw;
+    bottom: 3vh;
+  }
+  #PhotoF{
+    width:40vw !important;
+    height:55vh !important;
+    position:relative !important;
+   left: 25vw !important;
+    top:8vh !important;
+    border: 5px solid lightgray;
+   
+  }
+  #Photodesign{
+     width:30vw !important;
+    height:45vh !important;
+     border: 5px solid lightcoral;
+     position: absolute;
+     top: 6vh;
+     left: 4.5vh;
+  } 
+  #Social{
+    position: absolute;
+    top:12vh;
+  }
+  .github{
+    color:black;
+  }
+  #naming{
+    position: absolute;
+    top: 50vh;
+    left: 10vw;
+  }
+  #hi{
+    color:rgb(243, 223, 199) !important;
+  }
+  #name{
+    color:rgb(247, 236, 222) !important;
+    background-color: rgb(37, 36, 36) !important;
+  }
+  #name:hover{
+    background-color: lightblue !important;
+  }
+}
+@media(max-width:599px){
+      #name{
+        position:relative;
+        bottom: 15vh;
+          }
+      #hi{
+         position:relative;
+        bottom: 12vh;
+      }
+      .title{
+        position:relative;
+        bottom: 15vh;
+      }
+      #PhotoF{
+        height:48vh !important;
+        width:30vh !important;
+        position: relative !important;
+        left:0vw !important;
+        top: 9vh !important;
+      }
+      #Photo{
+        height:45vh !important;
+        width:30vh !important;
+        position: relative !important;
+        bottom: 0vh;
+      }
+}
+@media(max-width:599px) and (min-height:600px){
+   #PhotoF{
+        height:38vh !important;
+        width:30vh !important;
+        position: relative !important;
+        left:0vw !important;
+        top: 9vh !important;
+      }
+      #Photo{
+        height:36vh !important;
+        width:30vh !important;
+        position: relative !important;
+        bottom: 0vh;
+      }
+      #Photodesign{
+         height:36vh !important;
+        width:30vh !important;
+        position: relative !important;
+        bottom: 0vh;
+      }
+}

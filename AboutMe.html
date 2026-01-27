@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutMe</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .image{
+            background-image: url("back.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: right;
+            width: 100%;
+            height: 100vh;
+        }
+        .accordion-header:hover button{
+            background-color: white !important;
+        }
+        .accordion-item:hover .accordion-button{
+            animation:slideInRight 0.4s linear 0s;
+        }
+         .accordion-item .accordion-button{
+            animation:fadeIn 1s linear 0s;
+        }
+        @keyframes slideInRight{
+            0%{width: 0%;}
+            100%{width: 100%; }
+        }
+        @keyframes fadeIn{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+        .accordion-item .accordion-body{
+            height:0px;
+            overflow: hidden;
+            display: none;
+        }
+        .accordion-item:hover .accordion-body{
+            animation:slideInBottom 0.6s ease-out 0s ;
+            display:block;
+            height: 100px;
+            
+             }
+        @keyframes slideInBottom{
+            0%{height: 0px;}
+            100%{height:100px; }
+        }
+    </style>
+    <script>
+        window.addEventListener("load" ,()=>{
+            let myModal=new bootstrap.Modal(document.getElementById("modal"));
+            myModal.show();
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="modal" id="modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-light">
+                        <a href="#" class="btn position-absolute top-0 end-0 text-light" data-bs-dismiss="modal"><i class="ri-close-large-fill"></i></a>
+                        <h1>Hi,Welcome</h1>
+                    </div>
+                    <div style="background-color: beige;" class="modal-body">
+                        <p class="text-dark"><span class="text-danger fw-bold bg-secondary">
+                        I'm Abdul</span> a fronend developer.Currently having skills as HTML,CSS,Javascript Bootstrap and React.js,Figma for designing.
+                        <br>for more info like education, experience and achivement visit the page.
+                    </p>
+                    <h3 class="text-danger fst-italic">Thank You!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height:83vh; width:100vw;" class="image container-fluid mx-0">
+        <div class="row accordion accordion-flush  g-0 m-2" id="parent">
+        <div style="background-color: lightgray;" class="col-12 accordion-item g-2">
+            <div class="accordion-header">
+            <button style="background-color: darkgray;" class="accordion-button fw-bold" type="button"  >
+                    <span>Introduction</span> 
+            </button>
+            </div>
+            <div   id="content1" data-bs-parent="#parent">
+                <div class="accordion-body">
+                    Hi, I'm Abdul Salam Saifi, a passionate Frontend Developer from Meerut.
+                    I'm currently focused on building modern, responsive web interfaces using HTML, CSS, JavaScript, and Bootstrap.
+                    I enjoy learning new technologies and creating visually appealing user experiences.
+                    My goal is to become a full-stack developer and contribute to real-world projects that make a difference.
+                </div>
+            </div>
+        </div>
+        <div style="background-color: lightgray;" class="col-12 accordion-item g-2">
+            <div class="accordion-header">
+                <button style="background-color: darkgray;" class="accordion-button fw-bold" type="button" data-bs-target="#content2">Education</button>
+            </div>
+            <div id="content2" data-bs-parent="#parent">
+                <div class="accordion-body">
+                I'm Abdul Salam Saifi and currently persuing <strong>B.Tech in Computer Science and Engineering with 69%</strong> in Neelkanth Institute of Technology Meerut.<br>
+                I have completed my <strong>intermediate(PCM) with 75%</strong> in S D Inter College Sadar Meerut. <br>
+                I have completed my <strong>Highschool with 81%</strong> in C R K Inter College Rasulpur Aurangabad Meerut.
+            </div>
+            </div>
+        </div>
+        <div style="background-color: lightgray;" class="col-12 accordion-item g-2">
+            <div class="accordion-header">
+                <button style="background-color: darkgray;" class="accordion-button fw-bold"  data-bs-target="#content3">Experience</button>
+            </div>
+            <div  id="content3" data-bs-parent="#parent">
+                <div class="accordion-body">
+                    Hey there! I'm Abdul Salam Saifi, currently I am in my learning phase.So I gain the skills as HTML,CSS,JS,Bootstrap and 
+                    React.js also Figma.Therefore I doesn't have industry experience and will complete my graduation in 2026.    
+                </div>
+            </div>
+        </div>
+         <div style="background-color: lightgray;" class="col-12 accordion-item g-2">
+            <div class="accordion-header">
+                <button style="background-color: darkgray;" class="accordion-button fw-bold"  data-bs-target="#content4">Project & Skills</button>
+            </div>
+            <div id="content4" data-bs-parent="#parent">
+                <div class="accordion-body">
+                    I started to implement coding with my first project named <a href="structure.html" class="text-decoration-none text-danger fw-bold">My Personal Portfolio</a>.
+                   <br> In which I use HTML,CSS,Javascript and Bootstrap for responsive design.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+     <footer style="height:16vh; background-color: rgb(49, 49, 49)" class="position-absolute bottom-0 w-100 border-top border-2 border-light text-light">
+        <div class="text-center  fs-6 p-1">
+            <a style="color: orange;" href="https://www.linkedin.com/in/abdul-salam-saifi-583396263" class="text-decoration-none link-dark rounded-4 p-1 mx-1 fs-4"><i  style="color: orange;"  class="ri-linkedin-box-fill"></i></a>&nbsp;
+            <a style="color: orange;" href="mailto:adeebsaifi7711@gmail.com" class="text-decoration-none link-dark rounded-4 p-1  mx-1 fs-4"><i  style="color: orange;" class="ri-mail-line"></i></a>&nbsp;
+            <a style="color: orange;" href="https://x.com/MohdAbdul9193" class="text-decoration-none link-dark rounded-4 p-1  mx-1 fs-4"><i  style="color: orange;" class="ri-twitter-x-fill"></i></a>&nbsp;
+            <a style="color: orange;" href="https://github.com/AbdulSaifi11"  class="text-decoration-none link-dark  rounded-4 p-1 mx-1 fs-4" ><i  style="color: orange;" class="ri-github-fill"></i></a>
+        </div>
+        <div style="font-size:12px;" class="text-center ">
+           <a href="structure.html" class="text-decoration-none link-secondary fw-bolder text-center">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="Contact.html" class="text-decoration-none link-secondary fw-bolder text-center">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="AboutMe.html" class="text-decoration-none link-secondary fw-bolder text-center">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="Abdul_Salam_Saifi.pdf" class="text-decoration-none link-secondary fw-bolder text-center">Resume</a>
+        </div>
+        <div class="text-center">
+            <p style="font-size: xx-small;" class="float-end mx-3 text-light">Copyright &copy; 2025 &nbsp; &nbsp;All rights reserved.</p>
+        </div>
+    </footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>

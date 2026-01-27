@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+       .container-fluid{
+         background-image: url("formal.jpg");
+         background-repeat: no-repeat;
+         background-size: cover;
+       }
+       .form{
+            position: relative;
+            top: 50px;
+        }
+        div h3{
+            font-family: cursive;
+        }
+        </style>
+</head>
+<body>
+    <div class="container-fluid vh-100">
+        <div class="row">            
+            <form action="#" class="form col-12 d-flex flex-column align-items-center" onsubmit="validation()">
+                <div><h3 class="col-12 text-secondary fst-italic"><span class="fs-1">C</span>ontact <span class="fs-1">Me!!</span></h3></div>&nbsp;
+                <div><label for="name" class="form-label text-light fw-bold">Name<span class="text-danger">&sstarf;</span>&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                <input type="text" class="form-control-md" placeholder="Your Name.." id="name" required></div><br>
+                <div><label for="email" class="form-label text-light fw-bold">Email<span class="text-danger">&sstarf;</span>&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                <input type="email" id="email" class="form-control-md" placeholder="Your Email.." required></div><br>
+                <div><label for="phone" class="form-label text-light fw-bold">Phone<span class="text-danger">&sstarf;</span>&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                <input type="text" id="phone" class="form-control-md" placeholder="Your Phone.." required></div><br>
+                <div><label for="address" class="form-label text-light fw-bold">Address&nbsp;:&nbsp;</label>
+                <input class="form-control-md" id="address" id="address" placeholder="Address..."></div><br>
+                <div><input href="#" type="submit" value="Submit" class="btn btn-warning" required>&nbsp;&nbsp;
+                <input type="reset" value="Reset" class="btn btn-warning"></div>
+            </form>
+        </div>
+    </div>
+        <footer style="height:16vh; background-color: rgb(49, 49, 49)" class="position-absolute bottom-0 w-100 border-top border-2 border-light text-light">
+        <div class="text-center  fs-6 p-1">
+            <a style="color: orange;" href="https://www.linkedin.com/in/abdul-salam-saifi-583396263" class="text-decoration-none link-dark rounded-4 p-1 mx-1 fs-4"><i  style="color: orange;"  class="ri-linkedin-box-fill"></i></a>&nbsp;
+            <a style="color: orange;" href="mailto:adeebsaifi7711@gmail.com" class="text-decoration-none link-dark rounded-4 p-1  mx-1 fs-4"><i  style="color: orange;" class="ri-mail-line"></i></a>&nbsp;
+            <a style="color: orange;" href="https://x.com/MohdAbdul9193" class="text-decoration-none link-dark rounded-4 p-1  mx-1 fs-4"><i  style="color: orange;" class="ri-twitter-x-fill"></i></a>&nbsp;
+            <a style="color: orange;" href="https://github.com/AbdulSaifi11"  class="text-decoration-none link-dark  rounded-4 p-1 mx-1 fs-4" ><i  style="color: orange;" class="ri-github-fill"></i></a>
+        </div>
+        <div style="font-size:12px;" class="text-center ">
+           <a href="structure.html" class="text-decoration-none link-secondary fw-bolder text-center">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="Contact.html" class="text-decoration-none link-secondary fw-bolder text-center">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="AboutMe.html" class="text-decoration-none link-secondary fw-bolder text-center">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <a href="Abdul_Salam_Saifi.pdf" class="text-decoration-none link-secondary fw-bolder text-center">Resume</a>
+        </div>
+        <div class="text-center">
+            <p style="font-size: xx-small;" class="float-end mx-3 text-secondary">Copyright &copy; 2025 &nbsp; &nbsp;All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+       function validation(){
+        document.querySelector("#name").addEventListener("click",()=>{
+            document.querySelector("#name").style.backgroundColor="lightgray";
+        })
+         document.querySelector("#email").addEventListener("click",()=>{
+            document.querySelector("#email").style.backgroundColor="lightgray";
+        })
+        document.querySelector("#phone").addEventListener("click",()=>{
+            document.querySelector("#phone").style.backgroundColor="lightgray";
+        })
+         document.querySelector("#address").addEventListener("click",()=>{
+            document.querySelector("#address").style.backgroundColor="lightgray";
+        })
+        let name=document.getElementById("name").value.trim();
+        if (name===""){
+            alert("Enter Valid Name!!");
+            return false;
+        }
+        const phone=document.getElementById("phone").value.trim();
+        if(phone==""|| isNaN(phone))
+        {alert("Enter Valid Number!!")
+            return false;
+        }
+        else if(phone.length<10)
+          {alert("Enter Valid Number!!")
+            return false;
+        }
+        const email=document.getElementById("email").value.trim()
+        let atValue=email.indexOf("@");
+        let atDot=email.lastIndexOf(".");
+        if(email==""){
+            alert("Email cannot be blank!!");
+        }
+        else if(atValue<1||atDot<atValue+2||atDot+2>=email.length){
+            alert("Email is Invalid!!");
+            return false;
+        }
+    }
+    </script>
+</body>
+</html>
