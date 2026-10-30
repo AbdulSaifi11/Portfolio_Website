@@ -1,18 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#171717" />
-    <meta name="description" content="Portfolio of Abdul Salam Saifi, frontend and React developer." />
-    <title>Abdul Salam Saifi | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid vh-100">
+        <nav class="navbar h-4 bg-dark">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mydiv">
+                <span class="navbar-toggler-icon bg-light" ></span>
+            </button>
+            <div class="navbar-collapse collapse" id="mydiv">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="Home.html" class="nav-link link-light">Home</a></li>
+            <li class="nav-item"><a href="project.html" class="nav-link link-light">Projects</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link link-light">Contact Form</a></li>
+        </ul>
+    </div>
+    </nav>
+    <div class="row content h-75 ">
+        <h1 class="col-12 text-center">Abdul Salam Saifi</h1>
+        <p class="col-12 text-center">Hey I'm from Meerut and <br> currently persuing B.Tech in Neelkanth Institute of Technology</p>
+    </div>
+    <footer class="footer bg-dark d-block">
+        <a href="Home.html" class="link-light text-decoration-none mx-5">Home</a>&nbsp;&nbsp;&nbsp;
+        <a href="project.html" class="link-light text-decoration-none m-5">Projects</a>&nbsp;&nbsp;&nbsp;
+        <a href="contact.html" class="link-light text-decoration-none m-5">Contact Form</a>
+        <p class="fs-6 text-secondary float-end my-4">All Right Reserved</p>
+    </footer>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
