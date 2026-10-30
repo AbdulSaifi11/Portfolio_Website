@@ -27,7 +27,7 @@
   
 @keyframes typing {
   0% { width: 0; }
-  100% { width: 30ch; border-color:orange } /* text characters ke hisaab se */
+  100% { width: 35ch; border-color:orange } /* text characters ke hisaab se */
 }
 
 @keyframes blink {
